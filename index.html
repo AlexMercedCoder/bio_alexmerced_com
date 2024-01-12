@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <title>Link in Bio</title>
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+
+        /* Dark mode color scheme with CSS variables */
+        :root {
+            --background-color: rgb(33, 30, 24);
+            --text-color: #ffffff;
+            --link-color: #fdb50d;
+            --link-hover-color: #e7d05f;
+        }
+
+        /* Basic reset for padding and margin */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            font-family: "Noto Sans", Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Heading and subheading styles */
+        h1, h2 {
+            margin-bottom: 10px;
+        }
+
+        /* Styling for the circular image */
+        .profile-pic {
+            width: 120px; /* Image size */
+            height: 120px; /* Image size */
+            border-radius: 50%; /* Makes it circular */
+            margin: 20px auto; /* Centers the image */
+            overflow: hidden; /* Ensures the image stays within bounds */
+        }
+
+        .profile-pic img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Styling for the list of links */
+        .links-list {
+            list-style-type: none;
+            margin: 20px 0;
+        }
+
+        .links-list a {
+            display: block;
+            color: var(--link-color);
+            text-decoration: none;
+            margin-bottom: 10px;
+            transition: color 0.3s;
+        }
+
+        .links-list a:hover {
+            color: var(--link-hover-color);
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+
+            .profile-pic {
+                width: 100px; /* Smaller size for mobile */
+                height: 100px; /* Smaller size for mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Your Name</h1>
+    <h2>What you do</h2>
+
+    <div class="profile-pic">
+        <img src="https://static.vecteezy.com/system/resources/thumbnails/009/292/244/small/default-avatar-icon-of-social-media-user-vector.jpg" alt="Profile Picture">
+    </div>
+
+    <ul class="links-list">
+        <li><a href="https://instagram.com/yourusername" target="_blank">Instagram</a></li>
+        <li><a href="https://twitter.com/yourusername" target="_blank">Twitter</a></li>
+        <li><a href="https://youtube.com/yourusername" target="_blank">YouTube</a></li>
+        <!-- Add more links as needed -->
+    </ul>
+
+</body>
+</html>
