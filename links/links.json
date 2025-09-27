@@ -1,25 +1,38 @@
 [
   {
-    "link_text": "Developer Portal: developer.dremio.com",
-    "description": "Docs, SDKs, samples, and events for building on Dremio, Iceberg, Arrow, and Polaris.",
-    "url": "https://developer.dremio.com",
+    "link_text": "Free Copy of “Apache Iceberg: The Definitive Guide”",
+    "description": "Download the O’Reilly book covering everything about Apache Iceberg.",
+    "url": "https://hello.dremio.com/wp-apache-iceberg-the-definitive-guide-reg.html?utm_source=alexmerced_com&utm_medium=influencer&utm_campaign=iceberg&utm_content=alexmerced&utm_term=links-list",
     "new_window": true
   },
   {
-    "link_text": "Apache Iceberg: The Definitive Guide (O’Reilly)",
-    "description": "Deep dive into Iceberg architecture, operations, and ecosystem.",
-    "url": "https://www.oreilly.com/library/view/apache-iceberg-the/9781098161762/",
+    "link_text": "Free Copy of “Apache Polaris: The Definitive Guide”",
+    "description": "Get your free copy of the O’Reilly book on Apache Polaris, the open Iceberg catalog.",
+    "url": "https://hello.dremio.com/wp-apache-polaris-guide-reg.html?utm_source=alexmerced_com&utm_medium=influencer&utm_campaign=iceberg&utm_content=alexmerced&utm_term=links-list",
     "new_window": true
   },
   {
-    "link_text": "Alex’s Blog",
-    "description": "Essays on lakehouses, catalogs, AI agents, and open data standards.",
-    "url": "https://www.alexmerced.com/data"
+    "link_text": "Purchase \"Architecting an Apache Iceberg Lakehouse\"",
+    "description": "Buy the Manning book that dives into designing and operating Iceberg-based lakehouses.",
+    "url": "https://www.manning.com/books/architecting-an-apache-iceberg-lakehouse?utm_source=merced&utm_medium=affiliate&utm_campaign=book_merced&a_aid=merced&a_bid=7eac4151",
+    "new_window": true
+  },
+  {
+    "link_text": "Data Lakehouse Hub",
+    "description": "Blogs, Community and more around the data lakehouse.",
+    "url": "https://www.datalakehousehub.com",
+    "new_window": true
   },
   {
     "link_text": "Open Lakehouse Meetup",
     "description": "Join the global community meetup series focused on Iceberg, Arrow, Polaris, and more.",
     "url": "https://lu.ma/openlakehouse",
+    "new_window": true
+  },
+  {
+    "link_text": "Dremio Developer Portal",
+    "description": "Docs, SDKs, samples, and events for building on Dremio, Iceberg, Arrow, and Polaris.",
+    "url": "https://developer.dremio.com",
     "new_window": true
   }
 ]
