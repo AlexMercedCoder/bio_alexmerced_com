@@ -100,10 +100,11 @@
       margin-top: 22px;
       display:grid;
       gap: 12px;
+      position: relative; 
+      overflow: visible;
     }
 
 .link-card{
-  position: relative;
   border-radius: 18px;
   padding: 14px 16px;
   background:
@@ -112,13 +113,21 @@
   border:1px solid #23306b;
   box-shadow: 0 8px 24px rgba(0,0,0,.3);
   transition: transform .16s ease, border-color .16s ease, box-shadow .16s ease;
-  overflow: visible; /* 👈 change from hidden to visible */
+  position: relative; 
+  overflow: visible;
 }
     .link-card:hover{
       transform: translateY(-2px);
       border-color:#3a49a6;
       box-shadow: 0 14px 28px rgba(0,0,0,.38);
+      z-index: 20;
     }
+
+    .link-card:has(.link:hover),
+.link-card:has(.link:focus-visible),
+.link-card:has(.link[data-open="1"]) {
+  margin-bottom: 56px;           /* adjust to taste (40–64px works well) */
+}
 
     .link{
       display:flex; align-items:center; gap:12px;
@@ -158,14 +167,20 @@
       opacity:0; transform: translateY(-6px);
       pointer-events:none;
       transition: opacity .12s ease, transform .12s ease;
-      z-index: 50;            /* 👈 ensure it stacks above neighbors */
-      pointer-events: none;
+  z-index: 1000;   
+  pointer-events: none;
       white-space: normal;
     }
     .link:hover::after{
       opacity:1; transform: translateY(0);
     }
     .link[data-open="1"]::after{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.link:focus-visible::after,
+.link[data-open="1"]::after{
   opacity: 1;
   transform: translateY(0);
 }
