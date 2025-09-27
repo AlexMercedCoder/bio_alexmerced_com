@@ -1,0 +1,25 @@
+[
+  {
+    "link_text": "Developer Portal: developer.dremio.com",
+    "description": "Docs, SDKs, samples, and events for building on Dremio, Iceberg, Arrow, and Polaris.",
+    "url": "https://developer.dremio.com",
+    "new_window": true
+  },
+  {
+    "link_text": "Apache Iceberg: The Definitive Guide (O’Reilly)",
+    "description": "Deep dive into Iceberg architecture, operations, and ecosystem.",
+    "url": "https://www.oreilly.com/library/view/apache-iceberg-the/9781098161762/",
+    "new_window": true
+  },
+  {
+    "link_text": "Alex’s Blog",
+    "description": "Essays on lakehouses, catalogs, AI agents, and open data standards.",
+    "url": "https://www.alexmerced.com/data"
+  },
+  {
+    "link_text": "Open Lakehouse Meetup",
+    "description": "Join the global community meetup series focused on Iceberg, Arrow, Polaris, and more.",
+    "url": "https://lu.ma/openlakehouse",
+    "new_window": true
+  }
+]

@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Alex Merced's Links</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <style>
+    :root{
+      --navy-900:#0b1230;
+      --navy-800:#101a44;
+      --navy-700:#142055;
+      --card:#141c45;
+      --text:#e9ecff;
+
+      /* pastel accents */
+      --accent-1:#a8e6cf; /* mint */
+      --accent-2:#ffd3b6; /* peach */
+      --accent-3:#ffaaa5; /* rose */
+      --accent-4:#d6e0ff; /* periwinkle */
+      --accent-5:#faf3a3; /* soft yellow */
+      --accent-6:#c7b8ea; /* lavender */
+    }
+
+    *{ box-sizing:border-box; }
+    html,body{ height:100%; }
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      background: radial-gradient(1200px 700px at 10% -10%, #18245a 0%, var(--navy-900) 60%) no-repeat fixed;
+      color: var(--text);
+      line-height:1.5;
+    }
+
+    .wrap{
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 24px clamp(16px, 3vw, 32px) 64px;
+    }
+
+    header{
+      display:flex;
+      flex-direction:column;
+      gap:12px;
+      margin-bottom: 20px;
+    }
+
+    .title{
+      font-size: clamp(1.6rem, 2.8vw, 2.4rem);
+      font-weight: 800;
+      letter-spacing: 0.3px;
+      background: linear-gradient(90deg, var(--accent-4), var(--accent-1));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .subtitle{
+      color:#cbd2ffcc;
+      font-size: clamp(0.95rem, 1.6vw, 1.05rem);
+    }
+
+    /* Social buttons */
+    .socials{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+      gap: 10px;
+      margin-top: 4px;
+    }
+    .social{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      padding:10px 12px;
+      border-radius:16px;
+      background: linear-gradient(180deg, var(--card), #0f1840);
+      border:1px solid #263172;
+      text-decoration:none;
+      color:var(--text);
+      font-weight: 600;
+      transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+      box-shadow: 0 6px 18px rgba(0,0,0,.25);
+    }
+    .social:hover{
+      transform: translateY(-2px);
+      border-color:#3b4aa8;
+      box-shadow: 0 10px 22px rgba(0,0,0,.35);
+    }
+    .social svg{
+      width:18px; height:18px; flex:0 0 auto;
+      opacity:.9;
+    }
+    .social .label{
+      font-size:.92rem;
+      white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+    }
+
+    /* Links list */
+    .links{
+      margin-top: 22px;
+      display:grid;
+      gap: 12px;
+    }
+
+    .link-card{
+      position: relative;
+      border-radius: 18px;
+      padding: 14px 16px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.025), rgba(255,255,255,0)) ,
+        linear-gradient(180deg, var(--card), #0f1840);
+      border:1px solid #23306b;
+      box-shadow: 0 8px 24px rgba(0,0,0,.3);
+      transition: transform .16s ease, border-color .16s ease, box-shadow .16s ease;
+      overflow: hidden;
+    }
+    .link-card:hover{
+      transform: translateY(-2px);
+      border-color:#3a49a6;
+      box-shadow: 0 14px 28px rgba(0,0,0,.38);
+    }
+
+    .link{
+      display:flex; align-items:center; gap:12px;
+      text-decoration:none;
+      color:var(--text);
+      font-weight:700;
+      letter-spacing:.2px;
+      font-size:1.02rem;
+    }
+
+    .chip{
+      --bg: var(--accent-1);
+      flex:0 0 auto;
+      height:10px; width:10px; border-radius:50%;
+      background: var(--bg);
+      box-shadow: 0 0 0 6px color-mix(in srgb, var(--bg) 22%, transparent);
+    }
+
+    /* Tooltip using data-desc */
+    .link[data-desc]{
+      position:relative;
+    }
+    .link[data-desc]::after{
+      content: attr(data-desc);
+      position:absolute;
+      left:0; right:auto; top: calc(100% + 10px);
+      min-width: 240px;
+      max-width: min(520px, 88vw);
+      padding:10px 12px;
+      font-size:.92rem;
+      line-height:1.35;
+      color:#0d1333;
+      background: white;
+      border-radius: 12px;
+      border: 1px solid #e6e8ff;
+      box-shadow: 0 10px 26px rgba(10,16,50,.25);
+      opacity:0; transform: translateY(-6px);
+      pointer-events:none;
+      transition: opacity .12s ease, transform .12s ease;
+      z-index: 5;
+      white-space: normal;
+    }
+    .link:hover::after{
+      opacity:1; transform: translateY(0);
+    }
+
+    /* Accent bars */
+    .link-card::before{
+      content:"";
+      position:absolute; inset:auto 0 0 0; height:3px;
+      background: linear-gradient(90deg,var(--accent-1),var(--accent-2),var(--accent-3),var(--accent-6));
+      opacity:.85;
+    }
+
+    /* Footer */
+    footer{
+      margin-top: 40px;
+      opacity:.8;
+      font-size:.92rem;
+    }
+
+    /* Responsive spacing tweaks */
+    @media (min-width: 720px){
+      .links{ gap: 14px; }
+      .link{ font-size:1.06rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1 class="title">Alex Merced’s Links</h1>
+      <p class="subtitle">Quick jumps to projects, posts, and platforms. Hover a link to preview what it is.</p>
+
+      <nav class="socials" id="socials">
+        <!-- Social buttons injected from JS below -->
+      </nav>
+    </header>
+
+    <main class="links" id="links">
+      <!-- Link cards injected here -->
+    </main>
+
+    <footer>
+      Built with ❤️ in a simple static HTML page that reads <code>links.json</code>.
+    </footer>
+  </div>
+
+  <script>
+    // ====== EDIT THESE WITH YOUR SOCIAL URLs ======
+    const socialLinks = [
+      { name: "LinkedIn", url: "https://www.linkedin.com/in/alexmerced", accent: "var(--accent-1)", svg: `
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M4.98 3.5C4.98 4.88 3.86 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0 8h5v16H0zM8 8h4.8v2.2h.1c.7-1.3 2.4-2.7 4.9-2.7 5.2 0 6.2 3.4 6.2 7.8V24h-5v-6.9c0-1.7 0-3.8-2.3-3.8-2.3 0-2.7 1.8-2.7 3.7V24H8z"/></svg>`},
+      { name: "Twitter", url: "https://twitter.com/amdatalakehouse", accent: "var(--accent-2)", svg: `
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M23 3c-.8.4-1.7.6-2.6.8.9-.6 1.6-1.4 1.9-2.5-.9.6-1.9 1-3 1.3A4.5 4.5 0 0 0 12 6.7c0 .4 0 .8.1 1.1C8 7.6 4.2 5.7 1.7 2.7c-.5.9-.8 1.9-.8 3 0 2 1 3.8 2.6 4.8-.8 0-1.6-.3-2.2-.7v.1c0 2.8 2 5.1 4.6 5.6-.5.1-1 .2-1.5.2-.4 0-.7 0-1.1-.1.8 2.3 3 3.9 5.6 3.9A9 9 0 0 1 0 20.6 12.7 12.7 0 0 0 6.9 22c8.3 0 12.9-7 12.9-13.1v-.6c.9-.6 1.7-1.4 2.2-2.3z"/></svg>`},
+      { name: "Bluesky", url: "https://bsky.app/profile/alexmerced.com", accent: "var(--accent-3)", svg: `
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 13.7c2.7-2.9 6.7-7.4 8-9.5 1.3-2.1 1.6-3.8.8-4.1-.8-.3-2.3.8-4 2.4-1.7 1.6-3.6 3.9-4.8 5.7C11.7 6.4 9.7 4.1 8 2.5 6.3.9 4.8-.2 4 0c-.8.3-.5 2 .8 4.1 1.3 2.1 5.3 6.6 8 9.6-.6.6-1.4 1.3-2.2 1.9-2.7 2.1-5.7 3.8-6.9 3.5-1.2-.2-1.2-2.4-.9-3.8.4-1.4.7-2.2.3-2.4-.4-.1-1 .6-1.4 1.2C-.3 16.1-.4 19 .7 20.2c1 1.2 3.7.7 6.7-.8 2.2-1.1 3.7-2.1 4.6-2.8.9.7 2.4 1.7 4.6 2.8 3 1.5 5.7 2 6.7.8 1.1-1.2 1-4.1-.7-6.3-.5-.6-1-1.3-1.4-1.2-.4.2 0 1 .3 2.4.3 1.4.3 3.6-.9 3.8-1.2.3-4.2-1.4-6.9-3.5-.8-.6-1.6-1.3-2.3-1.9z"/></svg>`},
+      { name: "Mastodon", url: "https://mastodon.social/@alexmerced", accent: "var(--accent-4)", svg: `
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21.6 7.5c0-5-3.3-6.5-3.3-6.5C16.5.3 13 .1 10.1 0H10C7 .1 3.5.3 1.8 1 1.8 1  -1.5 2.5 -1.5 7.5c0 1.3-.1 2.9.8 4.6C1 15.4 3.9 16 3.9 16c1.6.3 3 .3 3 .3v3.4c0 2.7 3.5 3.7 5.7 1.5l3.6-3.7c1.5-.1 2.9-.2 4.2-.6 0 0 3-.6 3.5-3.9.4-1.7.7-3.3.7-5z"/></svg>`},
+      { name: "Medium", url: "https://medium.com/@alexmerced", accent: "var(--accent-5)", svg: `
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M2 7.2c0-.4 0-.6-.3-.9L.3 4.9V4.5h6.3l4.8 10.6L16 4.5h6v.4l-1.2 1.1c-.1.1-.2.3-.1.4v10.7c-.1.2 0 .3.1.4l1.2 1.1v.4h-7.2v-.4l1.3-1.3c.1-.1.1-.2.1-.3V8.6L12 20h-.6L6.6 8.6v7.8c-.1.2 0 .3.1.4l1.6 1.9v.4H0v-.4l1.6-1.9c.1-.1.2-.2.2-.4V7.2z"/></svg>`},
+      { name: "Substack", url: "https://alexmerced.substack.com", accent: "var(--accent-6)", svg: `
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M3 3h18v3H3V3zm0 5h18v3H3V8zm0 5h18v8l-9-4-9 4v-8z"/></svg>`},
+      { name: "Github", url: "https://github.com/AlexMercedCoder", accent: "var(--accent-1)", svg: `
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .5C5.7.5.9 5.3.9 11.6c0 4.9 3.2 9.1 7.7 10.6.6.1.8-.3.8-.6v-2.1c-3.1.7-3.8-1.3-3.8-1.3-.6-1.6-1.5-2-1.5-2-1.2-.8.1-.8.1-.8 1.3.1 2 . 1.9 2 . 1.9 1.2 2 3.1 1.4 3.9 1 .1-.9.5-1.4.9-1.7-2.5-.3-5.1-1.3-5.1-5.8 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.6.1-3.3 0 0 1-.3 3.4 1.2a11.7 11.7 0 0 1 6.2 0C19 4.5 20 4.8 20 4.8c.6 1.7.2 3 .1 3.3.8.8 1.2 1.9 1.2 3.2 0 4.6-2.6 5.4-5.2 5.8.5.4 1 1.3 1 2.6v3.8c0 .3.2.8.9.6 4.5-1.5 7.7-5.7 7.7-10.6C23.1 5.3 18.3.5 12 .5z"/></svg>`},
+    ];
+
+    // ====== LINK LIST RENDERING ======
+    const linksContainer = document.getElementById('links');
+    const socialsContainer = document.getElementById('socials');
+
+    // Render socials
+    socialLinks.forEach(s => {
+      const a = document.createElement('a');
+      a.className = 'social';
+      a.href = s.url;
+      a.target = '_blank';
+      a.rel = 'noopener noreferrer';
+      a.ariaLabel = s.name;
+      a.innerHTML = `${s.svg}<span class="label">${s.name}</span>`;
+      a.style.setProperty('--bg', s.accent);
+      socialsContainer.appendChild(a);
+    });
+
+    // Utility to choose a pastel accent "chip" color
+    const accents = ['var(--accent-1)','var(--accent-2)','var(--accent-3)','var(--accent-4)','var(--accent-5)','var(--accent-6)'];
+    let accentIndex = 0;
+    const nextAccent = () => {
+      const c = accents[accentIndex % accents.length];
+      accentIndex++;
+      return c;
+    };
+
+    async function loadLinks(){
+      try{
+        const res = await fetch('/links/links.json', {cache: 'no-store'});
+        if(!res.ok) throw new Error('Could not load links.json');
+        const data = await res.json();
+        if(!Array.isArray(data)) throw new Error('links.json must be an array of link objects');
+
+        data.forEach(item => {
+          const { link_text, description, url, new_window } = item;
+
+          const card = document.createElement('div');
+          card.className = 'link-card';
+
+          const a = document.createElement('a');
+          a.className = 'link';
+          a.href = url || '#';
+          a.setAttribute('data-desc', description || '');
+          a.setAttribute('aria-label', (description ? `${link_text}: ${description}` : link_text) || 'Link');
+
+          // default new_window = true
+          const openNew = (new_window === undefined || new_window === null) ? true : !!new_window;
+          if(openNew){
+            a.target = '_blank';
+            a.rel = 'noopener noreferrer';
+          }
+
+          const chip = document.createElement('span');
+          chip.className = 'chip';
+          chip.style.setProperty('--bg', nextAccent());
+
+          const text = document.createElement('span');
+          text.textContent = link_text || 'Untitled Link';
+
+          a.appendChild(chip);
+          a.appendChild(text);
+          card.appendChild(a);
+          linksContainer.appendChild(card);
+        });
+
+      }catch(err){
+        const e = document.createElement('div');
+        e.className = 'link-card';
+        e.style.borderColor = '#a33';
+        e.innerHTML = `<strong>Failed to load links.</strong><br/><small>${err.message}</small>`;
+        linksContainer.appendChild(e);
+      }
+    }
+
+    loadLinks();
+  </script>
+</body>
+</html>
