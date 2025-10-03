@@ -142,7 +142,7 @@ const DATA = {
           id: "misc",
           title: "Misc",
           links: [
-            { title: "My Slide Decks 2025 and Later", url: "https://drive.google.com/drive/folders/1_Te8nKrHDr9b3" }
+            { title: "My Slide Decks 2025 and Later", url: "https://drive.google.com/drive/folders/16xtuqsY7L4qqxhizOyYoKSnR-nHlWZTf" }
           ]
         }
       ]
