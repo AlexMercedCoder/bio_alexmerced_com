@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Alex’s Data Lakehouse Links</title>
+  <meta name="description" content="Curated data lakehouse resources by Alex Merced: books, tutorials, blogs, communities, and meetups." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/lakehouse/style.css" />
+</head>
+<body>
+  <!-- =========================
+       SITE WRAPPER
+  ========================== -->
+  <div class="layout">
+
+    <!-- =========================
+         SIDEBAR / TABLE OF CONTENTS
+         (Auto-populated by app.js)
+    ========================== -->
+    <aside class="sidebar" aria-label="Table of contents">
+      <div class="sidebar-inner">
+        <button id="themeToggle" class="btn secondary small" aria-pressed="false" title="Toggle dark mode">🌗 Theme</button>
+        <nav id="tocNav" class="toc"></nav>
+      </div>
+    </aside>
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+    <main class="main">
+
+      <!-- =========================
+           HERO
+      ========================== -->
+      <header class="hero" role="banner">
+        <div class="hero-left">
+          <h1>Alex’s Data Lakehouse Links</h1>
+          <p class="subtitle">A living index of books, tutorials, blogs, communities, and events around the open lakehouse—curated by Alex Merced.</p>
+          <div class="hero-actions">
+            <a class="btn primary" href="https://dot.cards/alexmerced" target="_blank" rel="noopener">Exchange Contact Info with Alex</a>
+            <button id="expandAll" class="btn ghost" title="Expand all sections">Expand All</button>
+            <button id="collapseAll" class="btn ghost" title="Collapse all sections">Collapse All</button>
+          </div>
+        </div>
+        <div class="hero-right">
+          <div class="stat">
+            <span id="totalLinks" class="stat-number">0</span>
+            <span class="stat-label">Total Links</span>
+          </div>
+          <div class="stat">
+            <span id="lastUpdated" class="stat-number">—</span>
+            <span class="stat-label">Last Updated</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- =========================
+           GLOBAL CONTROLS
+      ========================== -->
+      <section class="controls" aria-label="Search and filters">
+        <div class="search-wrap">
+          <input id="searchInput" type="search" placeholder="Search links, sites, or categories…" aria-label="Search links" />
+          <button id="clearSearch" class="btn secondary small" aria-label="Clear search">Clear</button>
+        </div>
+        <div class="filters-wrap">
+          <label class="filter">
+            <input type="checkbox" class="filter-checkbox" value="Written Content" checked />
+            <span>Written Content</span>
+          </label>
+          <label class="filter">
+            <input type="checkbox" class="filter-checkbox" value="Community" checked />
+            <span>Community</span>
+          </label>
+          <label class="filter">
+            <input type="checkbox" class="filter-checkbox" value="Other Resources" checked />
+            <span>Other Resources</span>
+          </label>
+        </div>
+      </section>
+
+      <!-- =========================
+           CONTENT SECTIONS (ACCORDIONS)
+           These are populated by app.js from the data model.
+      ========================== -->
+      <div id="contentRoot" class="sections"></div>
+
+      <!-- =========================
+           FOOTER
+      ========================== -->
+      <footer class="footer">
+        <p>Made with ❤️ for the Lakehouse community. Curated by Alex Merced.</p>
+      </footer>
+
+    </main>
+  </div>
+
+  <script src="/lakehouse/app.js"></script>
+</body>
+</html>
