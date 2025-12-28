@@ -1,132 +1,51 @@
-no<!DOCTYPE html>
-<html lang="en"></html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-            <!-- Google tag (gtag.js) -->
-            <script
-            async
-            src="https://www.googletagmanager.com/gtag/js?id=G-E736JN9CDX"
-          ></script>
-          <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() {
-              dataLayer.push(arguments);
-            }
-            gtag("js", new Date());
-      
-            gtag("config", "G-E736JN9CDX");
-          </script>
-        <!-- Google tag (gtag.js) -->
-        <script
-        async
-        src="https://www.googletagmanager.com/gtag/js?id=G-E736JN9CDX"
-      ></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-          dataLayer.push(arguments);
-        }
-        gtag("js", new Date());
-  
-        gtag("config", "G-E736JN9CDX");
-      </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E736JN9CDX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag("js", new Date());
+      gtag("config", "G-E736JN9CDX");
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <title>Alex Merced - Personal Social Links</title>
-    <style>
-
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
-
-        /* Dark mode color scheme with CSS variables */
-        :root {
-            --background-color: rgb(33, 30, 24);
-            --text-color: #ffffff;
-            --link-color: #fdb50d;
-            --link-hover-color: #e7d05f;
-        }
-
-        /* Basic reset for padding and margin */
-        *, *::before, *::after {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            background-color: var(--background-color);
-            color: var(--text-color);
-            font-family: "Noto Sans", Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            text-align: center;
-            font-size: 2em;
-        }
-
-        /* Heading and subheading styles */
-        h1, h2 {
-            margin-bottom: 10px;
-        }
-
-        /* Styling for the circular image */
-        .profile-pic {
-            width: 250px; /* Image size */
-            height: 250px; /* Image size */
-            border-radius: 50%; /* Makes it circular */
-            margin: 20px auto; /* Centers the image */
-            overflow: hidden; /* Ensures the image stays within bounds */
-        }
-
-        .profile-pic img {
-            width: 100%;
-            height: auto;
-        }
-
-        /* Styling for the list of links */
-        .links-list {
-            list-style-type: none;
-            margin: 20px 0;
-        }
-
-        .links-list a {
-            display: block;
-            color: var(--link-color);
-            text-decoration: none;
-            margin-bottom: 10px;
-            transition: color 0.3s;
-        }
-
-        .links-list a:hover {
-            color: var(--link-hover-color);
-        }
-
-        /* Mobile responsive */
-        @media (max-width: 600px) {
-            body {
-                padding: 10px;
-                font-size: 1.25em;
-            }
-
-            .profile-pic {
-                width: 100px; /* Smaller size for mobile */
-                height: 100px; /* Smaller size for mobile */
-            }
-        }
-    </style>
+    <title>Alex Merced - My Links</title>
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
+    <div class="container">
+        <header>
+            <img src="/headshot/3.jpg" alt="Profile Picture" class="avatar">
+            <h1>Alex Merced</h1>
+            <p class="text-muted">Nice Guy who likes to enlighten, entertain, and educate</p>
+        </header>
 
-    <h1>Alex Merced</h1>
-    <h2>Nice Guys who likes to enlighten, entertain, and educate</h2>
-
-    <div class="profile-pic">
-        <img src="/avatar/alexmerced_chibi_vibrant_happy_software_developer_with_thick_gl_b55fdc53-c3ce-4617-b9d6-59352cd5c642.jpg" alt="Profile Picture">
+        <nav class="social-nav">
+                <a href="https://bsky.app/profile/alextalksdatalakehouses.fyi" aria-label="BlueSky">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                    </svg>
+                </a>
+                <a href="#" aria-label="Twitter">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
+                </a>
+                <a href="https://www.instagram.com/alexmercedcoder" aria-label="Instagram">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"></line></svg>
+                </a>
+                <a href="https://indieweb.social/@alexmerced" aria-label="Mastodon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
+                </a>
+                <a href="https://www.threads.net/@alexmercedcoder" aria-label="Threads">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 1 0 10 10 9 9 0 0 0-2-6"></path><path d="M12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"></path></svg>
+                </a>
+        </nav>
+        
+        <main class="links-list" style="width: 100%;">
+            <a href="https://www.twitter.com/thealexmerced" class="btn btn-secondary">Twitter (@thealexmerced)</a>
+            <a href="https://www.snapchat.com/add/thealexmerced" class="btn btn-secondary">Snapchat (@thealexmerced)</a>
+        </main>
     </div>
-
-    <ul class="links-list">
-        <li><a href="https://www.twitter.com/thealexmerced" target="_blank">Twitter</a></li>
-        <li>@thealexmerced on snapchat</li>
-    </ul>
-
 </body>
 </html>

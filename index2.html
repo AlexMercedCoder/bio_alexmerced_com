@@ -1,124 +1,39 @@
 <!DOCTYPE html>
-<html lang="en"></html>
-<html>
+<html lang="en">
 <head>
-        <!-- Google tag (gtag.js) -->
-        <script
-        async
-        src="https://www.googletagmanager.com/gtag/js?id=G-E736JN9CDX"
-      ></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() {
-          dataLayer.push(arguments);
-        }
-        gtag("js", new Date());
-  
-        gtag("config", "G-E736JN9CDX");
-      </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E736JN9CDX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag("js", new Date());
+      gtag("config", "G-E736JN9CDX");
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <title>Alex Merced - Main</title>
-    <style>
-
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
-
-        /* Dark mode color scheme with CSS variables */
-        :root {
-            --background-color: rgb(33, 30, 24);
-            --text-color: #ffffff;
-            --link-color: #fdb50d;
-            --link-hover-color: #e7d05f;
-        }
-
-        /* Basic reset for padding and margin */
-        *, *::before, *::after {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        body {
-            background-color: var(--background-color);
-            color: var(--text-color);
-            font-family: "Noto Sans", Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            text-align: center;
-            font-size: 2em;
-        }
-
-        /* Heading and subheading styles */
-        h1, h2 {
-            margin-bottom: 10px;
-        }
-
-        /* Styling for the circular image */
-        .profile-pic {
-            width: 250px; /* Image size */
-            height: 250px; /* Image size */
-            border-radius: 50%; /* Makes it circular */
-            margin: 20px auto; /* Centers the image */
-            overflow: hidden; /* Ensures the image stays within bounds */
-        }
-
-        .profile-pic img {
-            width: 100%;
-            height: auto;
-        }
-
-        /* Styling for the list of links */
-        .links-list {
-            list-style-type: none;
-            margin: 20px 0;
-        }
-
-        .links-list a {
-            display: block;
-            color: var(--link-color);
-            text-decoration: none;
-            margin-bottom: 10px;
-            transition: color 0.3s;
-        }
-
-        .links-list a:hover {
-            color: var(--link-hover-color);
-        }
-
-        /* Mobile responsive */
-        @media (max-width: 600px) {
-            body {
-                padding: 10px;
-                font-size: 1.25em;
-            }
-
-            .profile-pic {
-                width: 100px; /* Smaller size for mobile */
-                height: 100px; /* Smaller size for mobile */
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
+    <div class="container">
+        <header>
+            <div class="profile-pic">
+                <img src="/avatar/alexmerced_chibi_vibrant_happy_podcaster_with_thick_glasses_and_379c719f-1567-42ca-bd70-29db4d71fe88.png" alt="Profile Picture" class="avatar">
+            </div>
+            <h1>Alex Merced</h1>
+            <h2>Your Friendly Neighborhood Tech Geek</h2>
+        </header>
 
-    <h1>Alex Merced</h1>
-    <h2>Your Friendly Neighborhood Tech Geek</h2>
-
-    <div class="profile-pic">
-        <img src="/avatar/alexmerced_chibi_vibrant_happy_podcaster_with_thick_glasses_and_379c719f-1567-42ca-bd70-29db4d71fe88.png" alt="Profile Picture">
+        <main class="links-list" style="width: 100%;">
+            <a href="https://www.linkedin.com/in/alexmerced" target="_blank" class="btn btn-primary">LinkedIN</a>
+            <a href="https://whois.alexmercedcoder.dev" target="_blank" class="btn btn-secondary">Professional Page</a>
+            <a href="/web" target="_blank" class="btn btn-secondary">Web Development Links (Blogs, Podcasts, Social)</a>
+            <a href="/data" target="_blank" class="btn btn-secondary">Data Engineering Links (Blogs, Podcasts, Social)</a>
+            <a href="/opinion" target="_blank" class="btn btn-secondary">Personal Thoughts and Opinion Links</a>
+            <a href="/music" target="_blank" class="btn btn-secondary">Alex Merced's Music Link</a>
+            <a href="/social" target="_blank" class="btn btn-secondary">General Social Links</a>
+        </main>
     </div>
-
-    <ul class="links-list">
-        <li><a href="https://www.linkedin.com/in/alexmerced" target="_blank">LinkedIN</a></li>
-        <li><a href="https://whois.alexmercedcoder.dev" target="_blank">Professional Page</a></li>
-        <li><a href="/web" target="_blank">Web Development Links (Blogs, Podcasts, Social)</a></li>
-        <li><a href="/data" target="_blank">Data Engineering Links(Blogs, Podcasts, Social)</a></li>
-        <li><a href="/opinion" target="_blank">Personal Thoughts and Opinion Links(Blogs, Podcasts, Social)</a></li>
-        <li><a href="/music" target="_blank">Alex Merced's Music Link</a></li>
-        <li><a href="/social" target="_blank">General Social Links</a></li>
-        <!-- Add more links as needed -->
-    </ul>
-
 </body>
 </html>

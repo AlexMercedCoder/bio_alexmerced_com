@@ -1,158 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-            <!-- Google tag (gtag.js) -->
-            <script
-            async
-            src="https://www.googletagmanager.com/gtag/js?id=G-E736JN9CDX"
-          ></script>
-          <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() {
-              dataLayer.push(arguments);
-            }
-            gtag("js", new Date());
-      
-            gtag("config", "G-E736JN9CDX");
-          </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E736JN9CDX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag("js", new Date());
+      gtag("config", "G-E736JN9CDX");
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alex Merced - Inclusive Individualist</title>
-    <style>
-        :root {
-            --body-bg: rgb(0, 0, 0);
-            --primary-color: rgba(237, 189, 15, 0.847);
-            --secondary-color: rgb(7, 6, 6);
-            --accent-color: #817d76;
-            
-        }
-        body, html {
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            background-color: var(--body-bg); /* yellow-400 */
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .container {
-            width: 100%;
-            max-width: 400px;
-            padding: 1rem;
-            box-sizing: border-box;
-        }
-
-        .content {
-            background-color: var(--primary-color); /* yellow-300 */
-            border-radius: 0.5rem;
-            box-shadow: 0 10px 15px -3px rgba(204, 17, 17, 0.1),
-                        0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            padding: 1.5rem;
-            box-sizing: border-box;
-            text-align: center;
-        }
-
-        header {
-            margin-bottom: 1.5rem;
-        }
-
-        .avatar {
-            width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            border: 4px solid var(--secondary-color);
-            object-fit: cover;
-        }
-
-        h1 {
-            margin: 0.5rem 0;
-            color: var(--secondary-color);
-            font-size: 1.5rem;
-        }
-
-        p {
-            margin: 0;
-            color: var(--secondary-color);
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .social-links a {
-            color: var(--secondary-color);
-            transition: color 0.3s ease;
-        }
-
-        .social-links a:hover {
-            color: var(--accent-color); /* yellow-600 */
-        }
-
-        .links {
-            display: flex;
-            flex-direction: column;
-            align-items: center; /* Center the buttons */
-            gap: 1rem;
-        }
-
-        .link-button {
-            display: block;
-            width: 100%; /* Ensure full width */
-            max-width: 320px; /* Limit button width for a better layout */
-            padding: 0.75rem;
-            background-color: var(--secondary-color);
-            color: var(--primary-color); /* yellow-400 */
-            text-align: center;
-            text-decoration: none;
-            border-radius: 0.25rem;
-            font-weight: bold;
-            transition: background-color 0.3s ease, color 0.3s ease;
-        }
-
-        .link-button:hover {
-            background-color: var(--accent-color); /* yellow-600 */
-            color: var(--secondary-color);
-        }
-
-        @media (max-width: 768px) {
-            .content {
-                padding: 1rem;
-            }
-
-            .avatar {
-                width: 80px;
-                height: 80px;
-            }
-
-            h1 {
-                font-size: 1.25rem;
-            }
-
-            .link-button {
-                padding: 0.5rem;
-                font-size: 0.9rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
     <div class="container">
-        <div class="content">
-            <header>
-                <img src="/headshot/7.jpg" alt="Profile Picture" class="avatar">
-                <h1>Alex Merced</h1>
-                <p>Inclusive Individualist</p>
-            </header>
-            
-            <nav class="social-links">
+        <header>
+            <img src="/headshot/7.jpg" alt="Profile Picture" class="avatar">
+            <h1>Alex Merced</h1>
+            <p class="text-muted">Inclusive Individualist</p>
+        </header>
+        
+        <nav class="social-nav">
                 <a href="https://bsky.app/profile/alextalksdatalakehouses.fyi" aria-label="BlueSky">
-                    <svg width="24" height="21" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 530">
-                        <path d="m135.72 44.03c66.496 49.921 138.02 151.14 164.28 205.46 26.262-54.316 97.782-155.54 164.28-205.46 47.98-36.021 125.72-63.892 125.72 24.795 0 17.712-10.155 148.79-16.111 170.07-20.703 73.984-96.144 92.854-163.25 81.433 117.3 19.964 147.14 86.092 82.697 152.22-122.39 125.59-175.91-31.511-189.63-71.766-2.514-7.3797-3.6904-10.832-3.7077-7.8964-0.0174-2.9357-1.1937 0.51669-2.514-7.8964-13.716 40.256-67.243 197.36-189.63 71.766-64.442-66.127-34.598-132.26 82.697-152.22-67.11 11.421-142.55-7.4488-163.25-81.433-5.9563-21.285-16.111-152.36-16.111-170.07 0-88.688 77.742-60.816 125.72-24.795z" />
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
                     </svg>
                 </a>
                 <a href="#" aria-label="Twitter">
@@ -174,15 +47,14 @@
                 </a>
             </nav>
             
-            <div class="links">
-                <a href="https://open.spotify.com/show/5cYbdb4q40zo0u4iHjZd9x?si=a3cd0b661bee4806" class="link-button">Podcast - Opinions of Alex Merced</a>
-                <a href="https://open.spotify.com/show/2V35nvmXHyMbA5SV1mQgh4?si=ec24348debeb4c1b" class="link-button">Podcast - Economics and Finance</a>
-                <a href="https://tuts.alexmercedcoder.dev/" class="link-button">Podcast - Loveatarian</a>
-                <a href="https://loveatarian.substack.com/" class="link-button">Loveatarian Substack</a>
-                <a href="https://www.tumblr.com/positive-libertarian-thoughts" class="link-button">Loveatarian Tumblr</a>
-            </div>
+            <main class="links-list" style="width: 100%;">
+                <a href="https://open.spotify.com/show/5cYbdb4q40zo0u4iHjZd9x?si=a3cd0b661bee4806" class="btn btn-secondary">Podcast - Opinions of Alex Merced</a>
+                <a href="https://open.spotify.com/show/2V35nvmXHyMbA5SV1mQgh4?si=ec24348debeb4c1b" class="btn btn-secondary">Podcast - Economics and Finance</a>
+                <a href="https://tuts.alexmercedcoder.dev/" class="btn btn-secondary">Podcast - Loveatarian</a>
+                <a href="https://loveatarian.substack.com/" class="btn btn-secondary">Loveatarian Substack</a>
+                <a href="https://www.tumblr.com/positive-libertarian-thoughts" class="btn btn-secondary">Loveatarian Tumblr</a>
+            </main>
         </div>
     </div>
 </body>
 </html>
-

@@ -1,0 +1,206 @@
+/* ======================================================
+   ThemeGen Design System
+   Generated: 12/28/2025
+====================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Poppins:wght@400;500;600&display=swap');
+
+:root {
+  /* Color Palette */
+  --primary: #2a8ae5;
+  --secondary: #e5842a;
+  --accent: #135696;
+  --background: #ffffff;
+  --surface: #f1f2f4;
+  --text: #000000;
+
+  /* Typography */
+  --font-heading: 'Oswald', sans-serif;
+  --font-body: 'Poppins', sans-serif;
+
+  /* Type Scale (1.25 Major Third) */
+  --text-xs: 0.64rem;
+  --text-sm: 0.8rem;
+  --text-base: 1rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.563rem;
+  --text-2xl: 1.953rem;
+  --text-3xl: 2.441rem;
+  --text-4xl: 3.052rem;
+
+  /* Spacing */
+  --container-max-width: 1200px; /* Standard desktop max width */
+  --container-narrow: 600px;     /* For link pages */
+}
+
+/* ======================================================
+   Reset & Base Styles
+====================================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+h1 { font-size: var(--text-4xl); }
+h2 { font-size: var(--text-3xl); }
+h3 { font-size: var(--text-2xl); }
+
+p { margin-bottom: 1rem; }
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.2s ease;
+}
+
+ul { list-style: none; }
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ======================================================
+   Layout
+====================================================== */
+.container {
+  width: 100%;
+  max-width: var(--container-narrow);
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* ======================================================
+   Components
+====================================================== */
+
+/* Profile Avatar */
+.avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid var(--primary);
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  margin: 0 auto 1.5rem auto;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-family: var(--font-body);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 100%; /* For link pages, full width buttons look best */
+  margin-bottom: 1rem;
+  text-align: center;
+  border: none;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: #ffffff;
+}
+.btn-primary:hover {
+  background-color: var(--accent); /* Darker shade */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.btn-secondary {
+  background-color: var(--secondary);
+  color: #000000;
+}
+.btn-secondary:hover {
+  background-color: #d07623; /* Darker orange */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Cards (if needed) */
+.card {
+  background-color: var(--surface);
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  margin-bottom: 1rem;
+}
+
+/* Social Icon Nav */
+.social-nav {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.social-nav a {
+  color: var(--text);
+  font-size: 1.5rem; /* Icon size */
+}
+.social-nav a:hover {
+  color: var(--primary);
+  transform: scale(1.1);
+}
+
+/* Forms */
+input, textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px solid var(--accent);
+  border-radius: 0.5rem;
+  font-family: var(--font-body);
+  margin-bottom: 1rem;
+}
+input:focus, textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(42, 138, 229, 0.2);
+}
+
+/* ======================================================
+   Utilities
+====================================================== */
+.text-center { text-align: center; }
+.text-muted { opacity: 0.7; }
+.mb-2 { margin-bottom: 0.5rem; }
+.mb-4 { margin-bottom: 1rem; }
+
+/* Responsive */
+@media (max-width: 600px) {
+  :root {
+    --text-4xl: 2.5rem;
+  }
+}
